@@ -1,0 +1,25 @@
+Script started on Fri 08 Dec 2017 04:43:04 PM EST
+timberlake {~/cse241} > vvp example.vvp[26Gim example.v[K[25Giverilog example.v -o example.vvp[25Gvim[K fa.v[25Geclipse[K[25G[1@~[33G[26Gmhertz/activityRunner ACT12 B21 B22 B2[26Geclipse[K[25G[P[32G[25Gvim fa.v[28G[Kiverilog example.v -o example.vvp[25Gvim example.v[K[26Gvp example.vvp[25G[Kvvp example.vvp[26Gim example.v[K[25Giverilog example.v -o example.vvp[25Gvim[Kiverilog example.v -o example.vvp[25Gvim example.v[K[26Gvp example.vvp[25G[Kvvp example.vvp[26Gim example.v[K[25Giverilog example.v -o example.vvp[25Gvim example.v[K[26Gvp example.vvp[25G[Kvvp example.vvp[26Gim example.v[K[25Giverilog example.v -o example.vvpe[P[P[P[P[P[P[P[1@l[1@a[1@b[1@6[1@C[1@o[1@m[1@b.[1@.[1@v[P[P.v -o example[P[P[P[P[P[P[P[1@l[1@a[1@b[1@6[1@C[1@o[1@m[1@b
+timberlake {~/cse241} > vvp la
+lab6Comb-backup.v  lab6Comb.v         lab6Comb.vcd       lab6Comb.vvp*      
+timberlake {~/cse241} > vvp lab6Comb.vvp
+VCD info: dumpfile lab6Comb.vcd opened for output.
+inputs: a = 0, b = 0, c = 0 | outputs: f = 1
+inputs: a = 0, b = 0, c = 1 | outputs: f = 1
+inputs: a = 0, b = 1, c = 0 | outputs: f = x
+inputs: a = 0, b = 1, c = 1 | outputs: f = 1
+inputs: a = 1, b = 0, c = 0 | outputs: f = 1
+inputs: a = 1, b = 0, c = 1 | outputs: f = x
+inputs: a = 1, b = 1, c = 0 | outputs: f = 1
+inputs: a = 1, b = 1, c = 1 | outputs: f = 1
+timberlake {~/cse241} > script --help
+script: invalid option -- '-'
+usage: script [-a] [-f] [-q] [-t] [file]
+timberlake {~/cse241} > script -help
+script: invalid option -- 'h'
+usage: script [-a] [-f] [-q] [-t] [file]
+timberlake {~/cse241} > finsh[K[Kishc[Kscript
+finishscript: Command not found.
+timberlake {~/cse241} > ^Dexit
+
+Script done on Fri 08 Dec 2017 04:45:33 PM EST

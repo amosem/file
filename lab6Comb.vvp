@@ -1,0 +1,71 @@
+#! /util/verilog-0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x7e6f00 .scope module, "test_f" "test_f" 2 26;
+ .timescale 0 0;
+v0x810a50_0 .var "t_a", 0 0;
+v0x810af0_0 .var "t_b", 0 0;
+v0x810ba0_0 .var "t_c", 0 0;
+v0x810c50_0 .net "t_f", 0 0, L_0x811230; 1 drivers
+S_0x7e6ff0 .scope module, "in1" "f_comb" 2 29, 2 8, S_0x7e6f00;
+ .timescale 0 0;
+L_0x810820 .functor NOT 1, v0x810af0_0, C4<0>, C4<0>, C4<0>;
+L_0x810d60 .functor NOT 1, v0x810ba0_0, C4<0>, C4<0>, C4<0>;
+L_0x810e10 .functor NOT 1, C4<z>, C4<0>, C4<0>, C4<0>;
+L_0x810ea0 .functor XOR 1, v0x810a50_0, L_0x810820, C4<0>, C4<0>;
+L_0x810fd0 .functor XOR 1, v0x810af0_0, L_0x810d60, C4<0>, C4<0>;
+L_0x811080 .functor XOR 1, v0x810ba0_0, L_0x810e10, C4<0>, C4<0>;
+L_0x811130 .functor OR 1, L_0x810ea0, L_0x810fd0, C4<0>, C4<0>;
+L_0x811230 .functor OR 1, L_0x811130, L_0x811080, C4<0>, C4<0>;
+v0x7e70e0_0 .net "a", 0 0, v0x810a50_0; 1 drivers
+v0x810200_0 .net "b", 0 0, v0x810af0_0; 1 drivers
+v0x8102a0_0 .net "b_n", 0 0, L_0x810820; 1 drivers
+v0x810340_0 .net "c", 0 0, v0x810ba0_0; 1 drivers
+v0x8103f0_0 .net "c_n", 0 0, L_0x810d60; 1 drivers
+v0x810490_0 .net "d", 0 0, C4<z>; 0 drivers
+v0x810570_0 .net "d_n", 0 0, L_0x810e10; 1 drivers
+v0x810610_0 .alias "f", 0 0, v0x810c50_0;
+v0x810700_0 .net "or_1", 0 0, L_0x811130; 1 drivers
+v0x8107a0_0 .net "x_1", 0 0, L_0x810ea0; 1 drivers
+v0x8108a0_0 .net "x_2", 0 0, L_0x810fd0; 1 drivers
+v0x810940_0 .net "x_3", 0 0, L_0x811080; 1 drivers
+    .scope S_0x7e6f00;
+T_0 ;
+    %set/v v0x810a50_0, 0, 1;
+    %set/v v0x810af0_0, 0, 1;
+    %set/v v0x810ba0_0, 0, 1;
+    %delay 20, 0;
+    %set/v v0x810ba0_0, 1, 1;
+    %delay 20, 0;
+    %set/v v0x810af0_0, 1, 1;
+    %set/v v0x810ba0_0, 0, 1;
+    %delay 20, 0;
+    %set/v v0x810ba0_0, 1, 1;
+    %delay 20, 0;
+    %set/v v0x810a50_0, 1, 1;
+    %set/v v0x810af0_0, 0, 1;
+    %set/v v0x810ba0_0, 0, 1;
+    %delay 20, 0;
+    %set/v v0x810ba0_0, 1, 1;
+    %delay 20, 0;
+    %set/v v0x810af0_0, 1, 1;
+    %set/v v0x810ba0_0, 0, 1;
+    %delay 20, 0;
+    %set/v v0x810ba0_0, 1, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x7e6f00;
+T_1 ;
+    %vpi_call 2 52 "$dumpfile", "lab6Comb.vcd";
+    %vpi_call 2 53 "$dumpvars", 1'sb0, S_0x7e6f00;
+    %vpi_call 2 54 "$monitor", "inputs: a = %b, b = %b, c = %b | outputs: f = %b", v0x810a50_0, v0x810af0_0, v0x810ba0_0, v0x810c50_0;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "lab6Comb.v";
